@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/*全体*/
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2ed573;
+    display: grid;
+    place-items: center;
+}
+
+/*カレンダーサイズ*/
+.container {
+    width: 770px;
+    background-color: #fff;
+}
+
+/*月名部分*/
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header #month {
+    color: #ff5252;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/*ボタン配置*/
+button {
+    width: 75px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.header button {
+    background-color: #ff5252;
+}
+
+/*曜日表示*/
+.weekdays {
+    width: 100%;
+    display: flex;
+    background-color: #2f3640;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.weekdays div {
+    width: 110px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/*日付部分*/
+#calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px #cbd4c2;
+    color: #2f3640;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*マウスカーソル*/
+.day:hover {
+    background-color: rgba(112, 111, 211, 0.1);
+    color: #cbd4c2;
+}
+
+/*今日の日付*/
+#currentDay {
+    background-color: #ff5252;
+    color: #fff;
+}
+
+.event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: #2f3640;
+    color: #fff;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+}
+
+.plain {
+    cursor: default;
+    box-shadow: none;
+}
+
+#modal {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#addEvent,
+#viewEvent {
+    display: none;
+    width: 370px;
+    background-color: #fff;
+    padding: 25px;
+    position: absolute;
+    z-index: 20;
+}
+
+#addEvent h2,
+#viewEvent h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#txtTitle {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #cbd4c2;
+    font-size: 16px;
+}
+
+#btnSave {
+    background-color: #2ed573;
+}
+
+.btnClose {
+    background-color: #2f3542;
+}
+
+#viewEvent p {
+    margin-bottom: 20px;
+}
+
+#btnDelete {
+    background-color: #ea2027;
+}
+
+.menu {
+    display: flex;
+}
+
+/*  */
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    width: 200px;
+    color: #2f3542;
+    text-align: center;
+    border: 30px 0;
+}
+
+.top-text {
+    margin-bottom: 30px;
+}
+
+#result {
+    margin-top: 30px;
+}
